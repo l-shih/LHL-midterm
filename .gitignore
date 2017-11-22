@@ -7,9 +7,7 @@ yarn-error.log*
 secrets.js
 .DS_Store
 package-lock.json
-.env
 *.map
-.sass-cache/
 
 # Runtime data
 pids
@@ -41,7 +39,6 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-public/styles/scss/
 
 # Typescript v1 declaration files
 typings/
