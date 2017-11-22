@@ -1,5 +1,6 @@
 # Node Skeleton
-
+<h1><u>BEFORE beginning to code for any parts of the project, make sure to <code>pull</code> from the repo <em>first</em>
+to make sure all the code is <em>up-to-date</em></u></h1>
 ## Project Setup
 
 1. Create your own empty repo on GitHub
