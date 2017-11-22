@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('line_item', function (table) {
+  return knex.schema.createTable('line_items', function (table) {
     table.increments();
     table.integer('quantity');
     table.float('price_per_unit',8 ,2);
@@ -13,5 +13,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('line_item');
+  return knex.schema.dropTable('line_items');
 };

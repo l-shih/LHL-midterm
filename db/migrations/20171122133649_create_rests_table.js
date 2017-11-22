@@ -1,4 +1,3 @@
-
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('restaurants', function (table) {
       table.increments();
@@ -10,7 +9,7 @@ exports.up = function(knex, Promise) {
       table.string('postal_code').notNullable();
       });
   };
-  
+
   exports.down = function(knex, Promise) {
     return knex.schema.dropTable('restaurants');
   };
