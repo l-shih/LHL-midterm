@@ -28,4 +28,8 @@
 - Node 5.10.x or above
 - NPM 3.8.x or above
 
+<<<<<<< HEAD
 hello
+=======
+chance did ....
+>>>>>>> a9d94fa32267193c55ff325d29c53e85c1983a03
