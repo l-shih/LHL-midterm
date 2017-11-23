@@ -19,10 +19,11 @@ module.exports = (knex) => {
       .select("*")
       .from("orders")
       .then((results) => {
-      res.render('orders_review_page', {
-        results: results
+        res.render('orders_review_page', {
+          results: results
+        });
       });
-    });
+  });
 
   router.get('/food_type',function(req, res) {
     knex
@@ -41,7 +42,6 @@ module.exports = (knex) => {
       .then(function(results) {
         res.json(results);
       });
-
   });
 
   return router;
