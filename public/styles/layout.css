@@ -31,13 +31,30 @@
 .navigation {
   grid-area: navigation;
   background: #123456;
+  height: 60px;
+}
+
+.navigation .nav {
+  margin-top: -10px;
+}
+
+.navigation .nav li:hover {
+  background-color: blue;
+}
+
+.navigation .nav li:hover a {
+  color: black;
+}
+
+.navigation .nav a {
+  color: lightgray;
 }
 
 .header {
   grid-area: header;
   height: 55px;
   background: #234567;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .header div {

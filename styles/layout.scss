@@ -55,13 +55,26 @@
 .navigation {
   grid-area: navigation;
   background: rgb(18,52,86);
+  height: 60px;
+  .nav {
+    margin-top: -10px;
+    li:hover {
+      background-color: blue;
+      a {
+        color: black;
+      }
+    }
+    a {
+      color: lightgray;
+    }
+  }
 }
 
 .header {
   grid-area: header;
   height: 55px;
   background: rgb(35,69,103);
-  margin-top: 70px;
+  margin-top: 60px;
 
   div {
     color: rgb(231, 231, 231);
