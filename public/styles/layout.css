@@ -41,6 +41,7 @@
 
 .main {
   grid-area: main;
+  margin-top: 5em;
 }
 
 .aside-1 {
