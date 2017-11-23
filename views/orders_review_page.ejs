@@ -9,14 +9,20 @@
     <main id='order_main'>
       This is where you can review the details of your order.
       <br>
-      <ul>
-        <% for (var i = 0; i < results.length; i++) {%>
-          <li><%= results[i].user_id %></li>
-          <li><%= results[i].total_price %></li>
-          <li><%= results[i].paid_at %></li>
-        <% } %>
-        <br/>
-      </ul>
+      <div class='order_details'>
+        <ul style='list-style-type: none'>
+          <% for (var i = 0; i < results.length; i++) {%>
+            <li>User Order Number: <%= results[i].user_id %>
+            <ul style='list-style-type: none'>
+              <li>Total Order Price: <%= results[i].total_price %></li>
+              <li>Order paid at: <%= results[i].paid_at %></li>
+              <li>Order available for pick up in roughly <%= results[i].est_ready_time %></li>
+            </ul>
+            <br>
+          <% } %>
+          <br/>
+        </ul>
+      </div>
     </main>
   </body>
 </html>
