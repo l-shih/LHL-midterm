@@ -17,7 +17,6 @@
       <h3>Menu</h3>
       <div class="panel panel-default">
         <article class="panel-body">
-          <img src="https://i.ytimg.com/vi/mPPb3SmYO9w/maxresdefault.jpg" alt="fireEgg" width="30%" height="30%">
           <header>Fire Egg!</header>
           <p class="description">It is a fire egg, can you believe?</p>
           <p class="price" data-price="10000.00">$10000.00</p>
@@ -30,24 +29,27 @@
       <h3>Order Detail</h3>
       <div  class=" panel panel-default">
         <article class="panel-body">
-          <div class="panel panel-default">
-            <p>Fire Egg</p>
-            <p data-quantity=1>Quantity: 1</p>
-            <p data-price=10000.00>Price: $10000.00</p>
-          </div>
-          <div class="panel panel-default">
-            <p>GST: 5%</p>
-            <p>PST: 7%</p>
-            <p data-total=10000.00>Total: $11200.00</p>
-          </div>
+          <form action="/menu/order_placed" method="POST">
 
-          <form action="/menu/order" method="POST">
+            <div class="panel panel-default">
+              <p>Fire Egg</p>
+              <p data-quantity=1>Quantity: 1</p>
+              <p data-price=10000.00>Price: $10000.00</p>
+              <input type="hidden" name="item_name" value="Fire Egg">
+            </div>
+
+            <div class="panel panel-default">
+              <p>GST: 5%</p>
+              <p>PST: 7%</p>
+              <p data-total=11200.00>Total: $11200.00</p>
+              <input type="hidden" name="total" value="$11200.00">
+            </div>
+
             <input type="text" name="phone" placeholder="Phone Number" pattern="^\d{3}-?\d{3}-?\d{4}$" required><br>
             <input type="text" name="fname" placeholder="First Name"><br>
             <input type="text" name="lname" placeholder="Last Name"><br>
             <input type="radio" name="pay_method" value="payonline" checked>Pay Online
             <input type="radio" name="pay_method" value="pickup" >Pay in person<br>
-            <input type="hidden" name="total" value="$10000.00">
             <input type="submit" class="submit_total btn btn-default" value="Place my order!">
           </form>
         </article>

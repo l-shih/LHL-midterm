@@ -1,0 +1,26 @@
+<% include ./partials/_header %>
+   <% console.log(results) %>
+   <div id='order_main'>
+      <div class='order_main_header'>
+        <p>Your order at <b>Lighthouse Pub - Gastown</b></p>
+      </div>
+      <br/>
+      <!-- TODO:
+      1. Title on orders page (e.g. 'Your Order at Lighthouse Pub')
+      2. Style the Orders review page -->
+      <div class='order-details'>
+        <ul style='list-style-type: none'>
+        <% for (var i = 0; i < results.length; i++) {%>
+          <li>User Order Number: <%= results[i].id %>
+            <ul style='list-style-type: none'>
+              <li>Total Order Price: <%= results[i].total_price %></li>
+              <li>Order paid at: <%= results[i].paid_at %></li>
+              <li>Order available for pick up in roughly <%= results[i].est_ready_time %></li>
+            </ul>
+            <br>
+          <% } %>
+          </ul>
+        </ul>
+      </div>
+    </div>
+<% include ./partials/_footer %>
