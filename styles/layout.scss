@@ -51,11 +51,13 @@
 }
 
 .navigation {
+  grid-area: navigation;
   background: rgb(18,52,86);
   grid-area: navigation;
 }
 
 .header {
+  grid-area: header;
   background: rgb(35,69,103);
   grid-area: header;
   margin-top: 40px;
@@ -65,11 +67,8 @@
   grid-area: main;
 }
 
-.aside-1 {
-  grid-area: aside-1;
-}
-
 .footer {
+  grid-area: footer;
   background: rgb(69,103,137);
   grid-area: footer;
   margin: 0;

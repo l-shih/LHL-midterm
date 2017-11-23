@@ -24,13 +24,13 @@
 }
 
 .semantic-grid-section {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
 .navigation {
-  background: #123456;
   grid-area: navigation;
+  background: #123456;
 }
 
 .header {
@@ -41,15 +41,11 @@
 
 .main {
   grid-area: main;
-  margin-top: 5em;
-}
-
-.aside-1 {
-  grid-area: aside-1;
 }
 
 .footer {
   background: #456789;
   grid-area: footer;
-  margin: 0;
 }
+
+

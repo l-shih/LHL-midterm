@@ -1,58 +1,58 @@
 <% include ./partials/_header %>
 
-<main class="semantic-grid-section main menu">
+<main class="semantic-grid-section site-wrapper main menu">
 
-  <div id="menu_categories" class="col-xs-12 col-md-2 container">
-    <h3>Categories</h3>
-    <div class="panel panel-default">
-      <ul class="panel-body">
-        <li>Drink</li>
-        <li>Main</li>
-        <li>Desser</li>
-      </ul>
+    <div id="menu_categories" class="col-xs-12 col-md-2 container">
+      <h3>Categories</h3>
+      <div class="panel panel-default">
+        <ul class="panel-body">
+          <li>Drink</li>
+          <li>Main</li>
+          <li>Desser</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div id="menu_item" class="col-xs-12 col-md-7 container">
-    <h3>Menu</h3>
-    <div class="panel panel-default">
-      <article class="panel-body">
-        <img src="https://i.ytimg.com/vi/mPPb3SmYO9w/maxresdefault.jpg" alt="fireEgg" width="30%" height="30%">
-        <header>Fire Egg!</header>
-        <p class="description">It is a fire egg, can you believe?</p>
-        <p class="price" data-price="10000.00">$10000.00</p>
-        <button type="button" class="glyphicon glyphicon-plus"></button>
-      </article>
+    <div id="menu_item" class="col-xs-12 col-md-7 container">
+      <h3>Menu</h3>
+      <div class="panel panel-default">
+        <article class="panel-body">
+          <img src="https://i.ytimg.com/vi/mPPb3SmYO9w/maxresdefault.jpg" alt="fireEgg" width="30%" height="30%">
+          <header>Fire Egg!</header>
+          <p class="description">It is a fire egg, can you believe?</p>
+          <p class="price" data-price="10000.00">$10000.00</p>
+          <button type="button" class="glyphicon glyphicon-plus"></button>
+        </article>
+      </div>
     </div>
-  </div>
 
-  <div id="menu_order" class="col-xs-12 col-md-3 container">
-    <h3>Order Detail</h3>
-    <div  class=" panel panel-default">
-      <article class="panel-body">
-        <div class="panel panel-default">
-          <p>Fire Egg</p>
-          <p data-quantity=1>Quantity: 1</p>
-          <p data-price=10000.00>Price: $10000.00</p>
-        </div>
-        <div class="panel panel-default">
-          <p>GST: 5%</p>
-          <p>PST: 7%</p>
-          <p data-total=10000.00>Total: $11200.00</p>
-        </div>
+    <div id="menu_order" class="col-xs-12 col-md-3 container">
+      <h3>Order Detail</h3>
+      <div  class=" panel panel-default">
+        <article class="panel-body">
+          <div class="panel panel-default">
+            <p>Fire Egg</p>
+            <p data-quantity=1>Quantity: 1</p>
+            <p data-price=10000.00>Price: $10000.00</p>
+          </div>
+          <div class="panel panel-default">
+            <p>GST: 5%</p>
+            <p>PST: 7%</p>
+            <p data-total=10000.00>Total: $11200.00</p>
+          </div>
 
-        <form action="/menu/order" method="POST">
-          <input type="text" name="phone" placeholder="Phone Number" pattern="^\d{3}-?\d{3}-?\d{4}$" required><br>
-          <input type="text" name="fname" placeholder="First Name"><br>
-          <input type="text" name="lname" placeholder="Last Name"><br>
-          <input type="radio" name="pay_method" value="payonline" checked>Pay Online
-          <input type="radio" name="pay_method" value="pickup" >Pay in person<br>
-          <input type="hidden" name="total" value="$10000.00">
-          <input type="submit" class="submit_total btn btn-default" value="Place my order!">
-        </form>
-      </article>
+          <form action="/menu/order" method="POST">
+            <input type="text" name="phone" placeholder="Phone Number" pattern="^\d{3}-?\d{3}-?\d{4}$" required><br>
+            <input type="text" name="fname" placeholder="First Name"><br>
+            <input type="text" name="lname" placeholder="Last Name"><br>
+            <input type="radio" name="pay_method" value="payonline" checked>Pay Online
+            <input type="radio" name="pay_method" value="pickup" >Pay in person<br>
+            <input type="hidden" name="total" value="$10000.00">
+            <input type="submit" class="submit_total btn btn-default" value="Place my order!">
+          </form>
+        </article>
+      </div>
     </div>
-  </div>
 
 </main>
 
