@@ -19,13 +19,7 @@ module.exports = (knex) => {
       .select("*")
       .from("orders")
       .then((results) => {
-<<<<<<< HEAD
-        res.render('orders_review_page', {
-          results: results
-        });
-=======
         res.json(results);
->>>>>>> c0fd93c61aba719f6f114371e4be76a2397da4e4
       });
   });
 
