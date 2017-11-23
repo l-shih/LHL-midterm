@@ -1,42 +1,24 @@
 .semantic-grid {
   display: grid;
   grid-template-columns: 1fr;
-<<<<<<< HEAD
-  grid-template-rows: minmax(80px, auto) minmax(60px, auto) minmax(160px, auto) minmax(100px, auto) repeat(2, minmax(80px, auto));
-  grid-row-gap: 1px;
-  grid-column-gap: 1px;
-  grid-template-areas: 'header' 'navigation' 'main' 'aside-1' 'footer';
-=======
   grid-template-rows: minmax(80px, auto) minmax(60px, auto) minmax(160px, auto) minmax(80px, auto);
   grid-row-gap: 1px;
   grid-column-gap: 1px;
   grid-template-areas: 'header' 'navigation' 'main' 'footer';
->>>>>>> ef9eed3a4abdcd4e26efd1d8776f1ca93b8b8c5d
 }
 
 @media screen and (min-width: 476px) {
   .semantic-grid {
-<<<<<<< HEAD
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, minmax(60px, auto)) minmax(180px, auto) repeat(2, minmax(80px, auto));
-    grid-template-areas: 'header header' 'navigation navigation' 'main main' 'aside-1 aside-1' 'footer footer';
-=======
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, minmax(60px, auto)) minmax(180px, auto) minmax(0, auto);
     grid-template-areas: 'header header' 'navigation navigation' 'main main' 'footer footer';
->>>>>>> ef9eed3a4abdcd4e26efd1d8776f1ca93b8b8c5d
   }
 }
 
 @media screen and (min-width: 786px) {
   .semantic-grid {
-<<<<<<< HEAD
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(2, minmax(60px, auto)) minmax(300px, auto) repeat(2, minmax(80px, auto));
-=======
     grid-template-columns: 3fr;
     grid-template-rows: repeat(2, minmax(60px, auto)) minmax(300px, auto) minmax(0, auto);
->>>>>>> ef9eed3a4abdcd4e26efd1d8776f1ca93b8b8c5d
     grid-template-areas: 'header header' 'navigation navigation' 'main main' 'footer footer';
   }
 }
@@ -46,17 +28,8 @@
   text-align: center;
 }
 
-<<<<<<< HEAD
-.header {
-  grid-area: header;
-}
-
-.navigation {
-  position: fixed;
-=======
 .navigation {
   background: #123456;
->>>>>>> ef9eed3a4abdcd4e26efd1d8776f1ca93b8b8c5d
   grid-area: navigation;
 }
 
@@ -75,11 +48,7 @@
 }
 
 .footer {
-<<<<<<< HEAD
-  grid-area: footer;
-=======
   background: #456789;
   grid-area: footer;
   margin: 0;
->>>>>>> ef9eed3a4abdcd4e26efd1d8776f1ca93b8b8c5d
 }

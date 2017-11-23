@@ -7,11 +7,4 @@ $(() => {
       $("<div>").text(user.name).appendTo($("body"));
     }
   });
-
-  $.ajax({
-    method:'GET',
-    url: '/menu'
-  }).done(() => {
-    res.redirect('/menu');
-  })
 });
