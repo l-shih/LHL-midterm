@@ -35,8 +35,16 @@
 
 .header {
   grid-area: header;
+  height: 55px;
   background: #234567;
-  margin-top: 40px;
+  margin-top: 70px;
+}
+
+.header div {
+  color: #e7e7e7;
+  font-family: 'Raleway', sans-serif;
+  font-size: 200%;
+  margin: -11px;
 }
 
 .main {
