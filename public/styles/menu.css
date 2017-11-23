@@ -1,0 +1,53 @@
+.menu {
+  background: aliceblue;
+}
+
+#menu_categories ul {
+  text-align: left;
+}
+
+#menu_categories li {
+  margin: 2em;
+  font-size: 120%;
+}
+
+#menu_item {
+  margin-bottom: 2em;
+  overflow: hidden;
+  font-size: 150%;
+  text-align: left;
+}
+
+#menu_item h3 {
+  text-align: center;
+}
+
+#menu_item img {
+  float: left;
+  margin-right: 2em;
+}
+
+#menu_item header {
+  color: red;
+}
+
+#menu_item .description {
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#menu_item .price {
+  float: left;
+}
+
+#menu_item button {
+  float: right;
+}
+
+#menu_order form {
+  padding: 10px;
+}
+
+#menu_order form input {
+  margin: 5px;
+}

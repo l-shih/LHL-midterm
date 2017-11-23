@@ -53,26 +53,22 @@
 }
 
 .header {
-  background: #AF2;
   grid-area: header;
 }
 
 .navigation {
-  background: #DF3;
+  position: fixed;
   grid-area: navigation;
 }
 
 .main {
-  background: #BF5;
   grid-area: main;
 }
 
 .aside-1 {
-  background: #F84;
   grid-area: aside-1;
 }
 
 .footer {
-  background: #FF2;
   grid-area: footer;
 }
