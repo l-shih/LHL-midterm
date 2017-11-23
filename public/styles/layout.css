@@ -31,13 +31,11 @@
 .navigation {
   grid-area: navigation;
   background: #123456;
-  grid-area: navigation;
 }
 
 .header {
   grid-area: header;
   background: #234567;
-  grid-area: header;
   margin-top: 40px;
 }
 
@@ -48,6 +46,8 @@
 .footer {
   grid-area: footer;
   background: #456789;
-  grid-area: footer;
-  margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
 }
