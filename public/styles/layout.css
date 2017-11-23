@@ -31,10 +31,10 @@
 .header {
   background: #AF2;
   grid-area: header;
+  margin-top: 40px;
 }
 
 .navigation {
-  /* position: fixed; */
   background: #DF3;
   grid-area: navigation;
 }
