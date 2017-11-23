@@ -15,7 +15,7 @@ $(() => {
           </li>
         `;
 
-        partial.appendTo('.order-details ul');
+        $(partial).appendTo('.order-details ul');
       }
     });
 
