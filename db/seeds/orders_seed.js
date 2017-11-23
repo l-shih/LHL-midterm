@@ -6,8 +6,6 @@ exports.seed = function(knex, Promise) {
         .returning('id')
         .then((id)=>{
           return knex('orders').insert([
-            //Knex for resources table
-            //{url: 'https://www.vegas.com/gaming/gaming-tips/sports-betting/', title: 'Your #1 resource for sports-betting', description: 'In-depth to all your sports-betting needs', user_id: id[0]}
             {
               total_price: '35.00',
               paid_at: '2017-11-22 18:40:00',
