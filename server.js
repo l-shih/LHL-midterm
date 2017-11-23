@@ -45,14 +45,11 @@ app.get("/", (req, res) => {
 
 // Orders review page:
 app.get('/orders', (req, res) => {
-  knex
-  .select("*")
-  .from("orders")
-  .then((results) => {
-  res.render('orders_review_page', {
-    results: results
-  });
-  });
+  res.render('orders_review_page')
+});
+
+app.get("/menu", (req, res) => {
+  res.render("menu");
 });
 
 app.listen(PORT, () => {

@@ -14,5 +14,16 @@ module.exports = (knex) => {
       });
   });
 
+  router.get('/orders', (req, res) => {
+    knex
+      .select("*")
+      .from("orders")
+      .then((results) => {
+      res.render('orders_review_page', {
+        results: results
+      });
+    })
+  });
+
   return router;
 };
