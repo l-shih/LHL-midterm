@@ -43,6 +43,11 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+// Orders review page:
+app.get('/orders', (req, res) => {
+  res.render('orders_review_page');
+});
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
