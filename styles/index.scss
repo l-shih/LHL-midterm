@@ -10,13 +10,16 @@
 // }
 
 /* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
+.btn{
   color: rgb(255, 255, 255);
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: rgb(83, 71, 71);
+  background-color: rgb(52,86,120);
   border: 1px solid #fff;
+  
+  &:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(64, 108, 151)
+  }
 }
 
 
@@ -32,7 +35,8 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 2px 5px rgba(0,0,0,.5);
+  overflow: hidden;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -47,8 +51,14 @@ body {
 }
 .site-wrapper-inner {
   display: table-cell;
-  vertical-align: top;
+  //vertical-align: top;
+  background-image: url('./assets/background_image.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
 .cover-container {
   margin-right: auto;
   margin-left: auto;
@@ -58,7 +68,6 @@ body {
 .inner {
   padding: 30px;
 }
-
 
 /*
  * Header
@@ -111,7 +120,7 @@ body {
  */
 
 .cover {
-  padding: 0 20px;
+  padding: 0 20px 125px 20px;
 }
 .cover .btn-lg {
   padding: 10px 20px;

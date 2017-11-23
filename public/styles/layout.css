@@ -28,15 +28,15 @@
   text-align: center;
 }
 
-.header {
-  background: #AF2;
-  grid-area: header;
-  margin-top: 40px;
+.navigation {
+  background: #123456;
+  grid-area: navigation;
 }
 
-.navigation {
-  background: #DF3;
-  grid-area: navigation;
+.header {
+  background: #234567;
+  grid-area: header;
+  margin-top: 40px;
 }
 
 .main {
@@ -50,7 +50,7 @@
 }
 
 .footer {
-  background: #FF2;
+  background: #456789;
   grid-area: footer;
   margin: 0;
 }

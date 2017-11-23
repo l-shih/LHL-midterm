@@ -50,15 +50,15 @@
   text-align: center;
 }
 
-.header {
-  background: #AF2;
-  grid-area: header;
-  margin-top: 40px;
+.navigation {
+  background: rgb(18,52,86);
+  grid-area: navigation;
 }
 
-.navigation {
-  background: #DF3;
-  grid-area: navigation;
+.header {
+  background: rgb(35,69,103);
+  grid-area: header;
+  margin-top: 40px;
 }
 
 .main {
@@ -72,7 +72,7 @@
 }
 
 .footer {
-  background: #FF2;
+  background: rgb(69,103,137);
   grid-area: footer;
   margin: 0;
 }
