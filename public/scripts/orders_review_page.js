@@ -10,4 +10,17 @@ $(() => {
                 </article>`
     return order;
   }
+  function renderOrderReview(order) {
+    var $eachOrder = createOrdersReviewElement(order);
+    $('#order_main').append($eachOrder);
+  }
+  function loadOrderReview(order) {
+    $.ajax({
+      method: 'GET',
+      url: '/api/',
+      success: function(order) {
+        renderOrderReview(order);
+      }
+    });
+  }
 });
