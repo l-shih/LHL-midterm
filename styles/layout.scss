@@ -1,3 +1,5 @@
+//@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 .semantic-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -53,14 +55,33 @@
 .navigation {
   grid-area: navigation;
   background: rgb(18,52,86);
-  grid-area: navigation;
+  height: 60px;
+  .nav {
+    margin-top: -10px;
+    li:hover {
+      background-color: blue;
+      a {
+        color: black;
+      }
+    }
+    a {
+      color: lightgray;
+    }
+  }
 }
 
 .header {
   grid-area: header;
+  height: 55px;
   background: rgb(35,69,103);
-  grid-area: header;
-  margin-top: 40px;
+  margin-top: 60px;
+
+  div {
+    color: rgb(231, 231, 231);
+    font-family: 'Raleway', sans-serif;
+    font-size: 200%;
+    margin: -11px;
+  }
 }
 
 .main {
@@ -69,7 +90,38 @@
 
 .footer {
   grid-area: footer;
+  height: 70px;
   background: rgb(69,103,137);
-  grid-area: footer;
-  margin: 0;
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  left: 0;
+  padding: 7px;
+  margin: auto;
+  text-shadow: none;
+  .center-block {
+    display: flex;
+    justify-content: center;
+    .lighthouse-image {
+      margin-left: 5px;
+      height: 57px;
+    }
+    .address {
+      text-align: right;
+      margin-top: -5px;
+      color: black;
+      
+      p {
+        margin: 1px;
+        color: rgb(231, 231, 231);
+      }
+    }
+  }
+  .copyright {
+    float: right;
+    margin: -11px 0 0 0;
+    font-size: 75%;
+    color: lightgray;
+  }
+
 }
