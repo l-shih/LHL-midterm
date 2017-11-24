@@ -89,8 +89,6 @@
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
   grid-area: footer;
   height: 70px;
   background: rgb(69,103,137);
@@ -100,20 +98,30 @@
   left: 0;
   padding: 7px;
   margin: auto;
-
-  .lighthouse-image {
-    margin-left: 5px;
-    height: 57px;
-  }
-
-  .address {
-    text-align: right;
-    margin-top: -5px;
-    color: black;
-    text-shadow: none;
-    p {
-      margin: 1px;
-      color: rgb(231, 231, 231);
+  text-shadow: none;
+  .center-block {
+    display: flex;
+    justify-content: center;
+    .lighthouse-image {
+      margin-left: 5px;
+      height: 57px;
+    }
+    .address {
+      text-align: right;
+      margin-top: -5px;
+      color: black;
+      
+      p {
+        margin: 1px;
+        color: rgb(231, 231, 231);
+      }
     }
   }
+  .copyright {
+    float: right;
+    margin: -11px 0 0 0;
+    font-size: 75%;
+    color: lightgray;
+  }
+
 }

@@ -69,8 +69,6 @@
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
   grid-area: footer;
   height: 70px;
   background: #456789;
@@ -80,21 +78,33 @@
   left: 0;
   padding: 7px;
   margin: auto;
+  text-shadow: none;
 }
 
-.footer .lighthouse-image {
+.footer .center-block {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .center-block .lighthouse-image {
   margin-left: 5px;
   height: 57px;
 }
 
-.footer .address {
+.footer .center-block .address {
   text-align: right;
   margin-top: -5px;
   color: black;
-  text-shadow: none;
 }
 
-.footer .address p {
+.footer .center-block .address p {
   margin: 1px;
   color: #e7e7e7;
+}
+
+.footer .copyright {
+  float: right;
+  margin: -11px 0 0 0;
+  font-size: 75%;
+  color: lightgray;
 }
