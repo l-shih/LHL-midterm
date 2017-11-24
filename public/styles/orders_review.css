@@ -12,7 +12,9 @@
   border-bottom: 3px solid darkblue;
   border-top-left-radius: 30%;
   border-top-right-radius: 30%;
-  margin: 5% 18% 0;
+  margin-top: 5%;
+  margin-left: 18%;
+  margin-right: 18%;
 }
 
 .orders_page .orders-main-text {
@@ -38,13 +40,9 @@
   border: 1px solid white;
   border-bottom-left-radius: 30%;
   border-bottom-right-radius: 30%;
-<<<<<<< HEAD
-  margin: 0 18% 3%;
-=======
   margin-left: 18%;
   margin-right: 18%;
   margin-bottom: 3%;
->>>>>>> 7bb38a315ed2bc80bedf4635822ddcaebaf36c32
 }
 
 .orders_page .cost-details1 {
