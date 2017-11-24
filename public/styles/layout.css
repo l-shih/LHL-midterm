@@ -69,6 +69,8 @@
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
   grid-area: footer;
   height: 70px;
   background: #456789;
@@ -76,18 +78,16 @@
   bottom: 0;
   width: 100%;
   left: 0;
-  padding: 8px;
-  padding-left: 550px;
+  padding: 7px;
+  margin: auto;
 }
 
 .footer .lighthouse-image {
-  float: left;
   margin-left: 5px;
   height: 57px;
 }
 
 .footer .address {
-  float: left;
   text-align: right;
   margin-top: -5px;
   color: black;

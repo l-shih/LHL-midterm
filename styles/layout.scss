@@ -89,6 +89,8 @@
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
   grid-area: footer;
   height: 70px;
   background: rgb(69,103,137);
@@ -96,22 +98,19 @@
   bottom:0;
   width: 100%;
   left: 0;
-  padding: 8px;
-  padding-left: 550px;
+  padding: 7px;
+  margin: auto;
 
   .lighthouse-image {
-    float:left;
     margin-left: 5px;
     height: 57px;
   }
 
   .address {
-    float: left;
     text-align: right;
     margin-top: -5px;
     color: black;
     text-shadow: none;
-
     p {
       margin: 1px;
       color: rgb(231, 231, 231);
