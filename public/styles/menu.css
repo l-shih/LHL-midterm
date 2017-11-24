@@ -3,6 +3,10 @@
   color: black;
 }
 
+.menu hr {
+  border: 1px solid red;
+}
+
 #menu_categories ul {
   text-align: left;
 }
@@ -13,8 +17,8 @@
 }
 
 #menu_item {
+  overflow: auto;
   margin-bottom: 2em;
-  overflow: hidden;
   font-size: 150%;
   text-align: left;
 }

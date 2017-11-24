@@ -1,7 +1,7 @@
 .semantic-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(80px, auto) minmax(60px, auto) minmax(160px, auto) minmax(80px, auto);
+  grid-template-rows: minmax(80px, auto) minmax(60px, auto) minmax(160px, auto) minmax(100px, auto) minmax(80px, auto);
   grid-row-gap: 1px;
   grid-column-gap: 1px;
   grid-template-areas: 'header' 'navigation' 'main' 'footer';
@@ -48,6 +48,10 @@
 
 .navigation .nav a {
   color: lightgray;
+}
+
+body {
+  background: aliceblue;
 }
 
 .header {
@@ -107,4 +111,8 @@
   margin: -11px 0 0 0;
   font-size: 75%;
   color: lightgray;
+}
+
+.footer footer {
+  margin-top: 120px;
 }

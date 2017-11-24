@@ -6,23 +6,16 @@
       <h3>Categories</h3>
       <div class="panel panel-default">
         <ul class="panel-body">
-          <li>Drink</li>
-          <li>Main</li>
-          <li>Desser</li>
+          <!-- JQ gets data from db to put on -->
         </ul>
       </div>
     </div>
 
     <div id="menu_item" class="col-xs-12 col-md-7 container">
       <h3>Menu</h3>
-      <div class="panel panel-default">
-        <article class="panel-body">
-          <header>Fire Egg!</header>
-          <p class="description">It is a fire egg, can you believe?</p>
-          <p class="price" data-price="10000.00">$10000.00</p>
-          <button type="button" class="glyphicon glyphicon-plus"></button>
-        </article>
-      </div>
+      <section class="menu_items">
+        <!-- JQ gets data from db to put on -->
+      </section>
     </div>
 
     <div id="menu_order" class="col-xs-12 col-md-3 container">
@@ -31,18 +24,15 @@
         <article class="panel-body">
           <form action="/menu/order_placed" method="POST">
 
-            <div class="panel panel-default">
-              <p>Fire Egg</p>
-              <p data-quantity=1>Quantity: 1</p>
-              <p data-price=10000.00>Price: $10000.00</p>
-              <input type="hidden" name="item_name" value="Fire Egg">
-            </div>
+            <section class='order_item'>
+              <!-- JQ gets data from db to put on -->
+            </section>
 
             <div class="panel panel-default">
               <p>GST: 5%</p>
               <p>PST: 7%</p>
-              <p data-total=11200.00>Total: $11200.00</p>
-              <input type="hidden" name="total" value="$11200.00">
+              <p id="total" data-total=0>Total: $0.00</p>
+              <input id="input_total" type="hidden" name="total">
             </div>
 
             <input type="text" name="phone" placeholder="Phone Number" pattern="^\d{3}-?\d{3}-?\d{4}$" required><br>
