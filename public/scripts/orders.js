@@ -1,5 +1,5 @@
 $(() => {
-  $.get('/api/orders')
+  $.get('/orders')
     .done(function(data) {
       for(let order of data){
         let partial = `

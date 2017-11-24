@@ -48,6 +48,14 @@ app.get('/orders', (req, res) => {
   res.render('orders_review_page')
 });
 
+app.get('/o', (req, res) => {
+  res.render('orders_review_page')
+});
+
+app.get('/o/:id', (req, res) => {
+  res.render('orders_review_page')
+});
+
 app.get("/menu", (req, res) => {
   res.render("menu");
 });
