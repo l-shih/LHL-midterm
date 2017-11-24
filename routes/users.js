@@ -14,30 +14,13 @@ module.exports = (knex) => {
       });
   });
 
-  router.get('/orders', function(req, res) {
-    return knex
-      .select("*")
-      .from("orders")
-      .then((results) => {
-        res.json(results);
-      });
+  router.get('/orders/:id', function(req, res) {
+    console.log(req.params);
+    // knex  
+    //   .select('*')
+    //   .from('orders')
+    //   .where('order_id', req.params.id)
   });
-
-  router.get('/o/:order_id', function(req, res) {
-    res.redirect(`/orders/${req.params.order_id}`);
-  });
-
-  // router.post('/orders/:id', function(req, res) {
-    
-  //   // return knex  
-  //   //   .select('order_id')
-  //   //   .from('orders')
-  //   //   .then((res) => {
-  //   //     if (req.body.param) {
-
-  //   //     }
-  //   //   })
-  // })
 
   router.get('/food_type',function(req, res) {
     knex
