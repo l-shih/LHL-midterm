@@ -2,7 +2,7 @@ $(() => {
   $.get('/api/orders')
     .done(function(data) {
       console.log(data);
-
+ 
       for(let order of data){
         let partial = `
           <li>User Order Number: ${order.id}
@@ -14,9 +14,9 @@ $(() => {
             <br>
           </li>
         `;
-
-        $(partial).appendTo('.order-details ul');
+ 
+        partial.appendTo('.order-details ul');
       }
     });
-
+ 
 });
