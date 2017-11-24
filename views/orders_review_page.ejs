@@ -1,16 +1,52 @@
 <% include ./partials/_header %>
-   <div id='order_main'>
-      <div class='order_main_header'>
-        <p>Your order at <b>Lighthouse Pub - Gastown</b></p>
-      </div>
-      <br/>
-      <!-- TODO:
-      1. Title on orders page (e.g. 'Your Order at Lighthouse Pub')
-      2. Style the Orders review page -->
-      <div class='order-details'>
-        <ul style='list-style-type: none'>
+  <div id='orders-background'>
+    <div id='orders-main'>
 
-        </ul>
+      <div class='orders-main-upper'>
+        <h1 class='orders-main-text'>YOUR ORDER AT LIGHTHOUSE PUB</h1>
+        <div class='orders-details'>
+          <div class='orders-items' style='list-style-type: none'>
+            <div class='item-details'>
+              <span>
+                <span class='item_num'>3 &nbsp; &nbsp;</span>
+                <span class='item_desc'>x &nbsp; &nbsp;</span>
+                <span class='item_total'>Fire Eggs</span>
+              </span>
+              <span class='total_cost'>&nbsp; $30,000</span>
+            </div>
+          </div>
+        </div>
       </div>
+      <br>
+      <div class='orders-main-lower'>
+        <div class='cost-div'>
+          <div class='cost-items'>
+            <div class='cost-details1'>
+              <span>
+                <span class='cost-subtotal'><b>Sub Total</b></span>
+                <span class='cost-tax'>$3,600</span>
+              </span>
+            </div>
+            <div class='cost-details2'>
+              <span>
+                <span class='cost-total-text'><b>Total Cost</b></span>
+                <span>$33,600</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 <% include ./partials/_footer %>
+
+
+<!-- <div class='order-main-header'>
+          <p class='order_main_text'>YOUR ORDER AT LIGHTHOUSE PUB!</p>
+        </div>
+        <br/>
+        <div class='order-details'>
+          <ul style='list-style-type: none'>
+          </ul>
+        </div> -->
