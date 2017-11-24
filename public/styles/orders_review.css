@@ -1,8 +1,70 @@
-#order_main {
-  border: 1px solid red;
-  background-color: #eee;
+#orders-backgroud {
+  background-color: aliceblue;
 }
 
-.order_main_header {
-  border: 2px solid red;
+#orders-main {
+  background-color: aliceblue;
+  border: 1px solid #A9A9A9;
+}
+
+.orders-main-upper {
+  background-color: white;
+  border: 1px solis #b3d9ff;
+  border-bottom: 3px solid darkblue;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  margin-top: 5%;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+.orders-main-text {
+  padding-top: 3%;
+  color: navy;
+  text-align: center;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 30px;
+  font-family: arial;
+  font-size: 1.5em;
+}
+
+.orders-main-lower {
+  background-color: white;
+  border: 1px solid white;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  margin-top: -1.7%;
+  margin-left: 18%;
+  margin-right: 18%;
+  margin-bottom: 3%;
+}
+
+.cost-details1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: arial;
+  font-size: 1.5em;
+}
+
+.cost-details2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 30px;
+  font-family: arial;
+  font-size: 1.5em;
 }
