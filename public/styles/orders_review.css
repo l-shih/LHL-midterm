@@ -1,13 +1,12 @@
-#orders-backgroud {
+.orders_page #orders-backgroud {
   background-color: aliceblue;
 }
 
-#orders-main {
+.orders_page #orders-main {
   background-color: aliceblue;
-  border: 1px solid #A9A9A9;
 }
 
-.orders-main-upper {
+.orders_page .orders-main-upper {
   background-color: white;
   border: 1px solis #b3d9ff;
   border-bottom: 3px solid darkblue;
@@ -18,13 +17,13 @@
   margin-right: 18%;
 }
 
-.orders-main-text {
+.orders_page .orders-main-text {
   padding-top: 3%;
   color: navy;
   text-align: center;
 }
 
-.item-details {
+.orders_page .item-details {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -36,18 +35,17 @@
   font-size: 1.5em;
 }
 
-.orders-main-lower {
+.orders_page .orders-main-lower {
   background-color: white;
   border: 1px solid white;
   border-bottom-left-radius: 30%;
   border-bottom-right-radius: 30%;
-  margin-top: -1.7%;
   margin-left: 18%;
   margin-right: 18%;
   margin-bottom: 3%;
 }
 
-.cost-details1 {
+.orders_page .cost-details1 {
   margin-top: 30px;
   margin-left: 5%;
   margin-right: 5%;
@@ -55,12 +53,12 @@
   font-size: 1.5em;
 }
 
-.cost-details1-inner {
+.orders_page .cost-details1-inner {
   display: flex;
   justify-content: space-around;
 }
 
-.cost-details2 {
+.orders_page .cost-details2 {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 30px;
@@ -68,7 +66,7 @@
   font-size: 1.5em;
 }
 
-.cost-details2-inner {
+.orders_page .cost-details2-inner {
   display: flex;
   justify-content: space-around;
 }

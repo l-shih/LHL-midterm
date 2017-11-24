@@ -50,6 +50,10 @@
   color: lightgray;
 }
 
+body {
+  background: aliceblue;
+}
+
 .header {
   grid-area: header;
   height: 55px;
@@ -107,4 +111,8 @@
   margin: -11px 0 0 0;
   font-size: 75%;
   color: lightgray;
+}
+
+.footer footer {
+  margin-top: 120px;
 }
