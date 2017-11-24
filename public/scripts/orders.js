@@ -1,7 +1,6 @@
 $(() => {
   $.get('/api/orders')
     .done(function(data) {
-      console.log(data);
 
       for(let order of data){
         let partial = `
