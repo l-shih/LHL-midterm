@@ -48,9 +48,6 @@
 }
 
 .cost-details1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   margin-top: 30px;
   margin-left: 5%;
   margin-right: 5%;
@@ -58,13 +55,20 @@
   font-size: 1.5em;
 }
 
-.cost-details2 {
+.cost-details1-inner {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+}
+
+.cost-details2 {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 30px;
   font-family: arial;
   font-size: 1.5em;
+}
+
+.cost-details2-inner {
+  display: flex;
+  justify-content: space-around;
 }
