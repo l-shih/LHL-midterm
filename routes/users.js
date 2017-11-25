@@ -14,15 +14,6 @@ module.exports = (knex) => {
       });
   });
 
-  router.get('/orders', function(req, res) {
-    knex
-      .select("*")
-      .from("orders")
-      .then((results) => {
-        res.json(results);
-      });
-  });
-
   router.get('/food_type',function(req, res) {
     knex
       .distinct('type')
