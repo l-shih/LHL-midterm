@@ -66,7 +66,18 @@ app.get('/orders/:id', (req, res) => {
 });
 
 app.get('/o/:id', function redirectToOrders(req, res) {
-  res.redirect('/orders/'+req.params.id)
+  knex('orders').select('id').where('id', req.params.id)
+  .then(function(result) {
+    if(result.length){
+      res.redirect('/orders/'+req.params.id);
+    } else{
+      res.send(404);
+    }
+  });
+});
+
+app.get('/owner', function(req, res) {
+  res.render('owner_secret');
 });
 
 app.get("/menu", (req, res) => {

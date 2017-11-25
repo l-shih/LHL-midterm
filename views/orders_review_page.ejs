@@ -1,6 +1,6 @@
 <% include ./partials/_header %>
 <main class="semantic-grid-section site-wrapper main orders container">
-  <div id="orders-main"> 
+  <div id="orders-main">
     <h1>Order #<%=result[0].id%> Details</h1>
     <table class = "order-breakdown">
       <%const grandTotal = Number(result[0].total_price).toFixed(2)%>
