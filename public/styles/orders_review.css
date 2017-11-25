@@ -12,58 +12,16 @@
 
 #orders-main {
   background-color: white;
-<<<<<<< HEAD
-  border: 1px solis #b3d9ff;
-  border-bottom: 3px solid darkblue;
-  border-top-left-radius: 30%;
-  border-top-right-radius: 30%;
-  margin-top: 5%;
-  margin-left: 18%;
-  margin-right: 18%;
-}
-
-.orders_page .orders-main-text {
-  padding-top: 3%;
-  color: navy;
-=======
   margin-top: -20px;
   height: 100%;
   margin-left: 15%;
   margin-right: 15%;
   color: #123456;
   padding: 10px;
->>>>>>> 48b8211efced8ec8c74c5e6f2f4d93051b567add
   text-align: center;
   opacity: 0.88;
 }
 
-<<<<<<< HEAD
-.orders_page .orders-items {
-  display: flex;
-  justify-content: space-around;
-}
-
-.orders_page .item-details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 50px;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 30px;
-  font-family: arial;
-  font-size: 1.5em;
-}
-
-.orders_page .orders-main-lower {
-  background-color: white;
-  border: 1px solid white;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
-  margin-left: 18%;
-  margin-right: 18%;
-  margin-bottom: 3%;
-=======
 table {
   border-collapse: collapse;
   width: 75%;
@@ -78,7 +36,6 @@ table td {
 
 table .orders-quantity {
   text-align: right;
->>>>>>> 48b8211efced8ec8c74c5e6f2f4d93051b567add
 }
 
 table .orders-calcs {
