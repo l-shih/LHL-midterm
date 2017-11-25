@@ -7,9 +7,9 @@ module.exports = (knex) => {
 
   router.get('/food_type',function(req, res) {
     knex
+      .distinct('type')
       .select('type')
       .from('items')
-      .groupBy('type')
       .then(function(results) {
         res.json(results);
       });
