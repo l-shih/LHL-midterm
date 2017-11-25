@@ -15,29 +15,29 @@ $(() => {
         let typeChild = `<dev id="${type}"></dev>`;
         $(typeChild).appendTo('.menu_items');
       }
-    });
 
-  /*
-  * items display
-  */
-  $.get('/api/items')
-    .done(function(data) {
-      for(let item of data){
-        let child = `
-          <div class="panel panel-default">
-            <article class="panel-body">
-              <header>${item.title}</header>
-              <p class="description">${item.description}</p>
-              <p class="price" data-price=${item.price}>$${item.price}</p>
-              <button type="button" class="glyphicon glyphicon-plus"></button>
-            </article>
-          </div>
-        `;
+      /*
+      * items display
+      */
+      $.get('/api/items')
+        .done(function(data) {
+          for(let item of data){
+            let child = `
+              <div class="panel panel-default">
+                <article class="panel-body">
+                  <header>${item.title}</header>
+                  <p class="description">${item.description}</p>
+                  <p class="price" data-price=${item.price}>$${item.price}</p>
+                  <button type="button" class="glyphicon glyphicon-plus"></button>
+                </article>
+              </div>
+            `;
 
-        $(child).hide().appendTo(`#menu_item .menu_items #${item.type}`);
-      }
+            $(child).hide().appendTo(`#menu_item .menu_items #${item.type}`);
+          }
 
-      $('#menu_item .menu_items :first-child').children().slideDown();
+          $('#menu_item .menu_items :first-child').children().slideDown();
+        });
     });
 
   //show up item after categories click
@@ -111,8 +111,12 @@ $(() => {
       $(this).parent().slideUp();
       $(this).parent().remove();
     }
-
   });
+
+  /*
+  * order items send and update db, send sms, redirect orders page
+  */
+
 });
 
 
