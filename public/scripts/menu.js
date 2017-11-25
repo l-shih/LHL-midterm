@@ -114,8 +114,12 @@ $(() => {
   });
 
   /*
-  * order items send and update db, send sms, redirect orders page
+  * send SMS
   */
+  $('#menu_order #order_item').on('click', '.submit_total', function(event) {
+    $(this).preventDefault;
+    console.log('ok');
+  });
 
 });
 

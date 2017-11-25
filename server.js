@@ -73,19 +73,18 @@ app.get("/menu", (req, res) => {
 app.post('/menu', (req, res)=>{
   return new Promise(function(resolve, reject) {
 
-    let itemName = req.body.item_name;
-    let totalPrice = Number(req.body.total);
-    let phoneNum = req.body.phone;
+    let itemName = req.body.item_name || '';
+    let totalPrice = Number(req.body.total) || 0;
+    let phoneNum = req.body.phone || '';
     let firstName = req.body.fname || '';
     let lastName = req.body.lname || '';
-    let payMethod = req.body.pay_method;
 
     let itemQuantity = {};
     for(let key of itemName){
       let lastSpceIndex = key.lastIndexOf(' ');
       let item = key.substring(0, lastSpceIndex);
       let quantity = Number(key.substring(lastSpceIndex));
-      itemQuantity[item] = quantity;
+      itemQuantity[item] = quantity || 0;
     }
     resolve({lastName, firstName, phoneNum, itemQuantity: itemQuantity, totalPrice});
 
