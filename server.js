@@ -63,7 +63,7 @@ app.get('/orders/:id', (req, res) => {
                 .innerJoin('orders', 'line_items.order_id', 'orders.id')
                 .where('orders.id', req.params.id)
                 .asCallback(function(err, result) {
-                  if (err) { 
+                  if (err) {
                     return err;
                   } else {
                     return result;
@@ -72,7 +72,7 @@ app.get('/orders/:id', (req, res) => {
           // console.log(result);
           return res.render('orders_review_page', {'result': result});
         })
-      } 
+      }
     });
 });
 
@@ -212,13 +212,14 @@ app.post('/owner/accept', (req, res)=>{
     let placeAt = new Date(currentTime).toUTCString();
     let readyAt = new Date(currentTime + Number(orderIdTime)*60*1000).toUTCString();
 
-    resolve({orderId, placeAt, readyAt});
+    resolve({orderId, placeAt, readyAt, orderIdTime});
   })
   .then(function(acceptObj) {
     return knex('orders').where('id', acceptObj.orderId)
     .update({
       'paid_at' : acceptObj.placeAt,
-      'ready_at' : acceptObj.readyAt
+      'ready_at' : acceptObj.readyAt,
+      'est_ready_time' : acceptObj.orderIdTime
     })
     .then(function() {
        return knex('users').distinct('users.phone').select('users.phone')
