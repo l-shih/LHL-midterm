@@ -6,9 +6,11 @@
         <h1 class='orders-main-text'>YOUR ORDER AT LIGHTHOUSE PUB</h1>
         <div class='orders-details'>
           <div class='orders-items' style='list-style-type: none'>
-              <%for (let i in result) {%>
-                <div class=item-details><%=result[i].quantity%> X <%=result[i].title%> <%=result[i].quantity * result[i].price%></div>
+            <ul>
+              <%for (let i in result) { %>
+              <li class='item-details'><%=result[i].quantity%> x <%=result[i].title%> <%=result[i].quantity * result[i].price%></li> 
               <%}%>
+            </ul>
           </div>
         </div>
       </div>
