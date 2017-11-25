@@ -24,14 +24,5 @@ module.exports = (knex) => {
       });
   });
 
-  router.get('/orders', function(req, res) {
-    knex
-      .select('*')
-      .from('orders')
-      .then(function(results) {
-        res.json(results);
-      });
-  });
-
   return router;
 };
