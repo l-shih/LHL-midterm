@@ -48,28 +48,38 @@ app.get("/", (req, res) => {
 
 // Orders review page:
 app.get('/orders/:id', (req, res) => {
-  knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id')
-  .from('items')
-  .innerJoin('line_items', 'line_items.item_id', 'items.id')
-  .innerJoin('orders', 'line_items.order_id', 'orders.id')
-  .where('orders.id', req.params.id)
-  .asCallback(function(err, result) {
-    if (err) {
-      return err;
-    } else {
-      return result;
-    }
-  }).then(function(result) {
-    // console.log(result);
-    res.render('orders_review_page', {'result': result});
-  })
+  if (req.params.id) {
+    console.log("Req params input: ", req.params.id)
+  }
+  knex('orders').select(1).where('id', req.params.id)
+    .then((rows) => {
+      if (!rows.length) {
+        return res.sendStatus(404);
+      } else {
+        return knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id')
+                .from('items')
+                .innerJoin('line_items', 'line_items.item_id', 'items.id')
+                .innerJoin('orders', 'line_items.order_id', 'orders.id')
+                .where('orders.id', req.params.id)
+                .asCallback(function(err, result) {
+                  if (err) { 
+                    return err;
+                  } else {
+                    return result;
+                  }
+                }).then(function(result) {
+          // console.log(result);
+          return res.render('orders_review_page', {'result': result});
+        })
+      } 
+    });
 });
 
 app.get('/o/:id', function redirectToOrders(req, res) {
   knex('orders').select('id').where('id', req.params.id)
   .then(function(result) {
-    if(result.length){
-      res.redirect('/orders/'+req.params.id);
+    if(!result){
+      res.redirect('/orders/'+req.params.id)
     } else{
       res.send(404);
     }
