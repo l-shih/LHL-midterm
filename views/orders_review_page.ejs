@@ -2,7 +2,7 @@
 <main class="semantic-grid-section site-wrapper main orders container">
   <div id="orders-main">
     <h1>Order #<%=result[0].id%> Details</h1>
-    <table class = "order-breakdown">
+    <table class = "order-breakdown table-responsive">
       <%const grandTotal = Number(result[0].total_price).toFixed(2)%>
       <%const subTotal = (Number(result[0].total_price)/1.12).toFixed(2)%>
       <%for (let i in result) {%>
@@ -14,7 +14,7 @@
         </tr>
       <%}%>
     </table>
-    <table class="orders-calcs">
+    <table class="table-responsive orders-calcs">
       <tr>
         <td></td>
         <td></td>
@@ -36,10 +36,22 @@
       <tr>
         <td></td>
         <td></td>
-        <td class="orders-calcs">Total</td>
-        <td class="orders-calcs">$ <%=grandTotal%></td>
+        <td class="orders-calcs orders-calcs-total">Total</td>
+        <td class="orders-calcs orders-calcs-total-price">$ <%=grandTotal%></td>
       </tr>
     </table>
+    <% const readyTime = result[0].est_ready_time %> 
+      <br>
+    <% if (!readyTime) { %>
+      <div class='orders-status-message'>
+        <p>You're order is still being processed, but will be ready soon!</p>
+        <p>Thanks for your patience!</p>
+      </div>
+    <% } else { %>
+      <p>Your order will be ready for pick up in ~ <%= readyTime %> minutes!</p>
+      <%/* let estimated_pickup_time = paid_at + ready_at; */%>
+      <%/* return estimated_pickup_time */%>
+    <% } %>
   </div>
   <% include ./partials/_footer %>
 </main>
