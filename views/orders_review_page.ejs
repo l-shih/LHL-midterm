@@ -7,7 +7,9 @@
         <div class='orders-details'>
           <div class='orders-items' style='list-style-type: none'>
               <%for (let i in result) {%>
-                <div class=items-details><%=result[i].quantity%> X <%=result[i].title%> <%=result[i].quantity * result[i].price%></div>
+                <div class=items-details><%=result[i].quantity%></div>
+                <div>X</div> 
+                <div><%=result[i].title%> <%=result[i].quantity * result[i].price%></div>
               <%}%>
           </div>
         </div>
