@@ -43,14 +43,16 @@
     <% const readyTime = result[0].est_ready_time %> 
       <br>
     <% if (!readyTime) { %>
-      <div class='orders-status-message'>
+      <div class='orders-status-message1'>
         <p>You're order is still being processed, but will be ready soon!</p>
         <p>Thanks for your patience!</p>
       </div>
     <% } else { %>
-      <p>Your order will be ready for pick up in ~ <%= readyTime %> minutes!</p>
-      <%/* let estimated_pickup_time = paid_at + ready_at; */%>
-      <%/* return estimated_pickup_time */%>
+      <div class='orders-status-message2'>
+        <p>Your order will be ready for pick up in approximately <%= readyTime %> minutes!</p>
+        <%/* let estimated_pickup_time = paid_at + ready_at; */%>
+        <%/* return estimated_pickup_time */%>
+      </div>
     <% } %>
   </div>
   <% include ./partials/_footer %>

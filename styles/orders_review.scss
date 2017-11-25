@@ -61,11 +61,14 @@ table {
 .table-responsive {
   border: none;
 }
-.orders-status-message {
+.orders-status-message1 {
   display: inline-block;
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 16px;
+}
+.orders-status-message2 {
   font-size: 16px;
 }
 .order-breakdown {
