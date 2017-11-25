@@ -10,9 +10,6 @@
   background-color: white;
   border: 1px solis #b3d9ff;
   border-bottom: 3px solid darkblue;
-  border-top-left-radius: 30%;
-  border-top-right-radius: 30%;
-  margin-top: 5%;
   margin-left: 18%;
   margin-right: 18%;
 }
@@ -35,14 +32,16 @@
   font-size: 1.5em;
 }
 
+.orders_page .orders-items {
+  display: inline-block;
+  justify-content: space-around;
+}
+
 .orders_page .orders-main-lower {
   background-color: white;
   border: 1px solid white;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
   margin-left: 18%;
   margin-right: 18%;
-  margin-bottom: 3%;
 }
 
 .orders_page .cost-details1 {

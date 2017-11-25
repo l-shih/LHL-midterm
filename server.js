@@ -45,12 +45,11 @@ app.get("/", (req, res) => {
 
 // Orders review page:
 app.get('/orders/:id', (req, res) => {
-  // res.render('orders_review_page', {
-  //   order: {
-  //     id: 1}
-  // })
-  knex.select().from('orders')
-  .where('id', req.params.id)
+  knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price')
+  .from('items')
+  .innerJoin('line_items', 'line_items.item_id', 'items.id')
+  .innerJoin('orders', 'line_items.order_id', 'orders.id')
+  .where('orders.id', req.params.id)
   .asCallback(function(err, result) {
     if (err) {
       return err;
@@ -59,7 +58,7 @@ app.get('/orders/:id', (req, res) => {
     }
   }).then(function(result) {
     console.log(result);
-    res.render('orders_review_page', {'result': result[0]});
+    res.render('orders_review_page', {'result': result});
   })
 });
 

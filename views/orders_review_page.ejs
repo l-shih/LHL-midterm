@@ -1,22 +1,17 @@
 <% include ./partials/_header %>
+<div class="orders_page">
   <div id='orders-background'>
     <div id='orders-main'>
       <div class='orders-main-upper'>
         <h1 class='orders-main-text'>YOUR ORDER AT LIGHTHOUSE PUB</h1>
         <div class='orders-details'>
           <div class='orders-items' style='list-style-type: none'>
-            <div class='item-details'>
-              <%=result.id%>, <%=result.total_price%>
-              
-                  <br>
-                </li>
-              </ul>
-              <!-- <span class='total_cost'>&nbsp; $30,000</span> -->
-            </div>
+              <%for (let i in result) {%>
+                <div class=items-details><%=result[i].quantity%> X <%=result[i].title%> <%=result[i].quantity * result[i].price%></div>
+              <%}%>
           </div>
         </div>
       </div>
-      <br>
       <div class='orders-main-lower'>
         <div class='cost-div'>
           <div class='cost-items'>
@@ -29,7 +24,7 @@
             <div class='cost-details2'>
               <div class='cost-details2-inner'>
                 <span class='cost-total-text'><b>Total Cost</b></span>
-                <span>$33,600</span>
+                <span>$ <%=Number(result[0].total_price).toFixed(2)%></span>
               </div>
             </div>
           </div>
@@ -37,4 +32,5 @@
       </div>
     </div>
   </div>
+</div>
 <% include ./partials/_footer %>
