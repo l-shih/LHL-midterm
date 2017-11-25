@@ -113,14 +113,18 @@ $(() => {
     }
   });
 
-  /*
-  * send SMS
-  */
-  $('#menu_order #order_item').on('click', '.submit_total', function(event) {
-    $(this).preventDefault;
-    console.log('ok');
-  });
-
+  //send sms
+    // $.ajax({
+    //   type: "POST",
+    //   username: SMS_Account,
+    //   password: SMS_Token,
+    //   url: SMS_Url,
+    //   data: {
+    //     "To" : phoneNum,
+    //     "From" : SMS_from,
+    //     "Body" : `${phoneNum} make an order: `
+    //   }
+    // });
 });
 
 
