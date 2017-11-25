@@ -57,7 +57,7 @@ app.get('/orders/:id', (req, res) => {
       if (!rows.length) {
         return res.status(404).send('You have not specified an order number! Have you made an order? You should make an order!');
       } else {
-        return knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id')
+        return knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id', 'orders.est_ready_time')
                 .from('items')
                 .innerJoin('line_items', 'line_items.item_id', 'items.id')
                 .innerJoin('orders', 'line_items.order_id', 'orders.id')
