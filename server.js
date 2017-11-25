@@ -46,15 +46,16 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get('/orders', (req, res) => {
+  res.sendStatus(404);
+})
+
 // Orders review page:
 app.get('/orders/:id', (req, res) => {
-  if (req.params.id) {
-    console.log("Req params input: ", req.params.id)
-  }
   knex('orders').select(1).where('id', req.params.id)
     .then((rows) => {
       if (!rows.length) {
-        return res.sendStatus(404);
+        return res.status(404).send('You have not specified an order number! Have you made an order? You should make an order!');
       } else {
         return knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id')
                 .from('items')
