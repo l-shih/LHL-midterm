@@ -1,6 +1,10 @@
 .menu {
-  background: aliceblue;
   color: black;
+  background-image: url("./assets/background_image.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
 }
 
 .menu hr {
