@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 
 // Orders review page:
 app.get('/orders/:id', (req, res) => {
-  knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price')
+  knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id')
   .from('items')
   .innerJoin('line_items', 'line_items.item_id', 'items.id')
   .innerJoin('orders', 'line_items.order_id', 'orders.id')

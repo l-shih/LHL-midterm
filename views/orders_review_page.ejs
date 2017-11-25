@@ -1,36 +1,46 @@
 <% include ./partials/_header %>
-<div class="orders_page">
-  <div id='orders-background'>
-    <div id='orders-main'>
-      <div class='orders-main-upper'>
-        <h1 class='orders-main-text'>YOUR ORDER AT LIGHTHOUSE PUB</h1>
-        <div class='orders-details'>
-          <div class='orders-items' style='list-style-type: none'>
-              <%for (let i in result) {%>
-                <div class=item-details><%=result[i].quantity%> X <%=result[i].title%> <%=result[i].quantity * result[i].price%></div>
-              <%}%>
-          </div>
-        </div>
-      </div>
-      <div class='orders-main-lower'>
-        <div class='cost-div'>
-          <div class='cost-items'>
-            <div class='cost-details1'>
-              <div class='cost-details1-inner'>
-                <span class='cost-subtotal'><b>Sub Total</b></span>
-                <span class='cost-tax'>$3,600</span>
-              </div>
-            </div>
-            <div class='cost-details2'>
-              <div class='cost-details2-inner'>
-                <span class='cost-total-text'><b>Total Cost</b></span>
-                <span>$ <%=Number(result[0].total_price).toFixed(2)%></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<main class="semantic-grid-section site-wrapper main orders container">
+  <div id="orders-main"> 
+    <h1>Order #<%=result[0].id%> Details</h1>
+    <table class = "order-breakdown">
+      <%const grandTotal = Number(result[0].total_price).toFixed(2)%>
+      <%const subTotal = (Number(result[0].total_price)/1.12).toFixed(2)%>
+      <%for (let i in result) {%>
+        <tr>
+          <td class="orders-quantity"><%=result[i].quantity%></td>
+          <td>X</td>
+          <td class="orders-name"><%=result[i].title%></td>
+          <td class="orders-total">$ <%=Number(result[i].quantity * result[i].price).toFixed(2)%></td>
+        </tr>
+      <%}%>
+    </table>
+    <table class="orders-calcs">
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="orders-calcs">Subtotal</td>
+        <td class="orders-calcs">$ <%=subTotal%></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="orders-calcs">GST</td>
+        <td class="orders-calcs">$ <%=Number(subTotal*0.05).toFixed(2)%></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="orders-calcs">PST</td>
+        <td class="orders-calcs">$ <%=Number(subTotal*0.07).toFixed(2)%></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="orders-calcs">Total</td>
+        <td class="orders-calcs">$ <%=grandTotal%></td>
+      </tr>
+    </table>
   </div>
-</div>
-<% include ./partials/_footer %>
+  <% include ./partials/_footer %>
+</main>
+
