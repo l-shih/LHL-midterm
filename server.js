@@ -116,13 +116,10 @@ app.post('/menu', (req, res)=>{
       itemString += item.concat(' ' + quantity.toString() + '; ');
     }
 
-    client.messages.create({
-      body: SMS + itemString,
-      to: process.env.SMS_to,
-      from: process.env.SMS_from
-    })
+    let preSMS = SMS + itemString;
+    console.log(preSMS);
 
-    resolve({lastName, firstName, phoneNum, itemQuantity: itemQuantity, totalPrice});
+    resolve({lastName, firstName, phoneNum, itemQuantity: itemQuantity, totalPrice, SMS: preSMS});
 
   })
   .then(function(userObj) {
@@ -173,6 +170,14 @@ app.post('/menu', (req, res)=>{
           .then(function(rows) {
             let orderId = rows[rows.length - 1].id;
             orderObj.orderId = orderId;
+
+            //get order id and send sms
+            client.messages.create({
+              body: orderObj.SMS + ' Order Id: ' + orderId,
+              to: process.env.SMS_to,
+              from: process.env.SMS_from
+            })
+
             return orderObj;
           });
         });
@@ -196,7 +201,62 @@ app.post('/menu', (req, res)=>{
       res.redirect(`/o/${id}`);
     });
   });
+});
 
+// owner editing page
+app.post('/owner/accept', (req, res)=>{
+  return new Promise(function(resolve, reject) {
+    let orderId = req.body.orderId || null;
+    let orderIdTime = req.body.orderIdTime || null;
+    let currentTime = new Date().getTime();
+    let placeAt = new Date(currentTime).toUTCString();
+    let readyAt = new Date(currentTime + Number(orderIdTime)*60*1000).toUTCString();
+
+    resolve({orderId, placeAt, readyAt});
+  })
+  .then(function(acceptObj) {
+    return knex('orders').where('id', acceptObj.orderId)
+    .update({
+      'paid_at' : acceptObj.placeAt,
+      'ready_at' : acceptObj.readyAt
+    })
+    .then(function() {
+       return knex('users').distinct('users.phone').select('users.phone')
+       .innerJoin('orders', 'users.id', 'order_id')
+       .where('orders.id', acceptObj.orderId)
+       .then(function(rows) {
+          let userPhone = rows[0].phone;
+
+          let SMS = `Your order has been accepted. It will be ready in ${acceptObj.readyAt}. You can check the order status on /orders/${acceptObj.orderId}`;
+
+          //send SMS to user
+          client.messages.create({
+            body: SMS,
+            to: '+1'+userPhone,
+            from: process.env.SMS_from
+          })
+       });
+    });
+  })
+  .then(function() {
+    res.redirect('/owner');
+  });
+});
+
+app.post('/owner/add', (req, res)=>{
+  let type = req.body.addType || null;
+  let title = req.body.addTitle || null;
+  let des = req.body.addDes || null;
+  let price = req.body.addPrice || null;
+  let resId = req.body.addrestId || null;
+
+  res.redirect('/owner');
+});
+
+app.post('/owner/delete', (req, res)=>{
+  let deleId = req.body.itemId;
+
+  res.redirect('/owner');
 });
 
 app.listen(PORT, () => {
