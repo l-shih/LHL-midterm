@@ -14,6 +14,9 @@ const knex        = require("knex")(knexConfig[ENV]);
 const morgan      = require('morgan');
 const knexLogger  = require('knex-logger');
 
+const twilio      = require('twilio');
+const client      = new twilio(process.env.SMS_Account, process.env.SMS_Token);
+
 // Seperated Routes for each Resource
 const usersRoutes = require("./routes/users");
 
@@ -45,7 +48,7 @@ app.get("/", (req, res) => {
 
 // Orders review page:
 app.get('/orders/:id', (req, res) => {
-  knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price')
+  knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id')
   .from('items')
   .innerJoin('line_items', 'line_items.item_id', 'items.id')
   .innerJoin('orders', 'line_items.order_id', 'orders.id')
@@ -79,13 +82,24 @@ app.post('/menu', (req, res)=>{
     let firstName = req.body.fname || '';
     let lastName = req.body.lname || '';
 
+    let SMS = `${phoneNum}: ${firstName} ${lastName} sended an order: `;
+    var itemString = '';
+
     let itemQuantity = {};
     for(let key of itemName){
       let lastSpceIndex = key.lastIndexOf(' ');
       let item = key.substring(0, lastSpceIndex);
       let quantity = Number(key.substring(lastSpceIndex));
       itemQuantity[item] = quantity || 0;
+      itemString += item.concat(' ' + quantity.toString() + '; ');
     }
+
+    client.messages.create({
+      body: SMS + itemString,
+      to: process.env.SMS_to,
+      from: process.env.SMS_from
+    })
+
     resolve({lastName, firstName, phoneNum, itemQuantity: itemQuantity, totalPrice});
 
   })

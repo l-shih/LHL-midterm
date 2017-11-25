@@ -1,13 +1,18 @@
-.orders_page #orders-backgroud {
+.orders {
+  background-image: url("./assets/background_image.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
+  background-size: cover;
+}
+
+#orders-backgroud {
   background-color: aliceblue;
 }
 
-.orders_page #orders-main {
-  background-color: aliceblue;
-}
-
-.orders_page .orders-main-upper {
+#orders-main {
   background-color: white;
+<<<<<<< HEAD
   border: 1px solis #b3d9ff;
   border-bottom: 3px solid darkblue;
   border-top-left-radius: 30%;
@@ -20,9 +25,19 @@
 .orders_page .orders-main-text {
   padding-top: 3%;
   color: navy;
+=======
+  margin-top: -20px;
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+  color: #123456;
+  padding: 10px;
+>>>>>>> 48b8211efced8ec8c74c5e6f2f4d93051b567add
   text-align: center;
+  opacity: 0.88;
 }
 
+<<<<<<< HEAD
 .orders_page .orders-items {
   display: flex;
   justify-content: space-around;
@@ -48,30 +63,36 @@
   margin-left: 18%;
   margin-right: 18%;
   margin-bottom: 3%;
+=======
+table {
+  border-collapse: collapse;
+  width: 75%;
+  color: black;
+  margin: auto;
 }
 
-.orders_page .cost-details1 {
-  margin-top: 30px;
-  margin-left: 5%;
-  margin-right: 5%;
-  font-family: arial;
-  font-size: 1.5em;
+table td {
+  padding: 8px;
+  text-align: center;
 }
 
-.orders_page .cost-details1-inner {
-  display: flex;
-  justify-content: space-around;
+table .orders-quantity {
+  text-align: right;
+>>>>>>> 48b8211efced8ec8c74c5e6f2f4d93051b567add
 }
 
-.orders_page .cost-details2 {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 30px;
-  font-family: arial;
-  font-size: 1.5em;
+table .orders-calcs {
+  text-align: right;
 }
 
-.orders_page .cost-details2-inner {
-  display: flex;
-  justify-content: space-around;
+table .orders-name {
+  text-align: left;
+}
+
+table .orders-total {
+  text-align: right;
+}
+
+.order-breakdown {
+  border-bottom: 1px solid black;
 }
