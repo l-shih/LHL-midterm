@@ -107,6 +107,10 @@ app.post('/menu', (req, res)=>{
     let SMS = `${phoneNum}: ${firstName} ${lastName} sent an order: `;
     var itemString = '';
 
+    if(!itemName.length){
+      res.send(404);
+    }
+
     let itemQuantity = {};
     for(let key of itemName){
       let lastSpceIndex = key.lastIndexOf(' ');
