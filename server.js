@@ -104,7 +104,7 @@ app.post('/menu', (req, res)=>{
     let firstName = req.body.fname || '';
     let lastName = req.body.lname || '';
 
-    let SMS = `${phoneNum}: ${firstName} ${lastName} sended an order: `;
+    let SMS = `${phoneNum}: ${firstName} ${lastName} sent an order: `;
     var itemString = '';
 
     let itemQuantity = {};
@@ -117,7 +117,6 @@ app.post('/menu', (req, res)=>{
     }
 
     let preSMS = SMS + itemString;
-    console.log(preSMS);
 
     resolve({lastName, firstName, phoneNum, itemQuantity: itemQuantity, totalPrice, SMS: preSMS});
 
