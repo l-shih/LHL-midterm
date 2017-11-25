@@ -5,15 +5,6 @@ const router  = express.Router();
 
 module.exports = (knex) => {
 
-  router.get("/", (req, res) => {
-    knex
-      .select("*")
-      .from("users")
-      .then((results) => {
-        res.json(results);
-      });
-  });
-
   router.get('/food_type',function(req, res) {
     knex
       .select('type')
@@ -28,6 +19,15 @@ module.exports = (knex) => {
     knex
       .select()
       .from('items')
+      .then(function(results) {
+        res.json(results);
+      });
+  });
+
+  router.get('/orders', function(req, res) {
+    knex
+      .select('*')
+      .from('orders')
       .then(function(results) {
         res.json(results);
       });

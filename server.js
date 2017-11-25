@@ -44,21 +44,43 @@ app.get("/", (req, res) => {
 });
 
 // Orders review page:
-app.get('/orders', (req, res) => {
-  res.render('orders_review_page')
+app.get('/orders/:id', (req, res) => {
+  // res.render('orders_review_page', {
+  //   order: {
+  //     id: 1}
+  // })
+  knex.select().from('orders')
+  .where('id', req.params.id)
+  .asCallback(function(err, result) {
+    if (err) {
+      return err;
+    } else {
+      return result;
+    }
+  }).then(function(result) {
+    console.log(result);
+    res.render('orders_review_page', {'result': result[0]});
+  })
 });
 
-app.get('/o', (req, res) => {
-  res.render('orders_review_page')
-});
-
-app.get('/o/:id', (req, res) => {
-  res.render('orders_review_page')
+app.get('/o/:id', function redirectToOrders(req, res) {
+  res.redirect('/orders/'+req.params.id)
 });
 
 app.get("/menu", (req, res) => {
   res.render("menu");
 });
+
+if (process.env.NODE_ENV === 'development') { // Only in dev environment 
+  
+     // Absolute path to output file 
+     var path = require('path');
+     var filepath = path.join(__dirname, './docs/routes.generated.txt');
+  
+     // Invoke express-print-routes 
+     require('express-print-routes')(app, filepath);
+     
+;}
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

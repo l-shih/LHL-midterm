@@ -1,0 +1,32 @@
+router                                                                                                         
+ ├── query                                         *                                                           
+ ├── expressInit                                   *                                                           
+ ├── logger                                        *                                                           
+ ├── <anonymous>                                   *                                                           
+ ├── urlencodedParser                              *                                                           
+ ├── sass                                          /^\/styles\/?(?=\/|$)/                                      
+ ├── serveStatic                                   *                                                           
+ ├── router                                        /^\/api\/?(?=\/|$)/                                         
+ │   router                                                                                                    
+ │    ├── bound dispatch                           /food_type                                                  GET
+ │    │    └── <anonymous>                         /                                                           GET
+ │    │   
+ │    ├── bound dispatch                           /items                                                      GET
+ │    │    └── <anonymous>                         /                                                           GET
+ │    │   
+ │    └── bound dispatch                           /orders                                                     GET
+ │         └── <anonymous>                         /                                                           GET
+ │        
+ │   
+ ├── bound dispatch                                /                                                           GET
+ │    └── <anonymous>                              /                                                           GET
+ │   
+ ├── bound dispatch                                /orders/:id                                                 GET
+ │    └── <anonymous>                              /                                                           GET
+ │   
+ ├── bound dispatch                                /o/:id                                                      GET
+ │    └── redirectToOrders                         /                                                           GET
+ │   
+ └── bound dispatch                                /menu                                                       GET
+      └── <anonymous>                              /                                                           GET
+     
