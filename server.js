@@ -68,8 +68,8 @@ app.get('/orders/:id', (req, res) => {
 app.get('/o/:id', function redirectToOrders(req, res) {
   knex('orders').select('id').where('id', req.params.id)
   .then(function(result) {
-    if(!result){
-      res.redirect('/orders/'+req.params.id)
+    if(result.length){
+      res.redirect('/orders/'+req.params.id);
     } else{
       res.send(404);
     }
