@@ -57,7 +57,7 @@ app.get('/orders/:id', (req, res) => {
       return result;
     }
   }).then(function(result) {
-    console.log(result);
+    // console.log(result);
     res.render('orders_review_page', {'result': result});
   })
 });
