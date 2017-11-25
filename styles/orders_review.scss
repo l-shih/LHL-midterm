@@ -36,6 +36,20 @@ table {
   }
   .orders-calcs {
     text-align: right;
+    font-size: 15px;
+    font-family: Arial;
+    line-height: 10px;
+    border: none;
+  }
+  .orders-calcs-total {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+  }
+  .orders-calcs-total-price {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
   }
   .orders-name {
     text-align: left;
@@ -44,6 +58,19 @@ table {
     text-align: right;
   }
 }
+.table-responsive {
+  border: none;
+}
+.orders-status-message {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+}
 .order-breakdown {
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-bottom: 1px solid black;
 }
