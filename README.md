@@ -65,7 +65,11 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
 <hr>
 <h2><a id='final_product'>Final Product</a></h2>
 <h3>Lighthouse Pub</h3>
+<h5><i>Index/Cover Page</i></h5>
 <img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_index_page.png'>
-<center><p>Index/Cover page</center>
+<h5><i>Menu Page</i></h5>
+<img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_menu_page.png'>
+<h5><i>Orders-Review Page</i></h5>
+<img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_orders_page.png'>
 <hr>
 <h2><a id='project_contributors'>Project Contributors</a><h2>
