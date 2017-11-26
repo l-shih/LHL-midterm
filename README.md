@@ -73,7 +73,7 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
 <h5><i>Orders-Review Page</i></h5>
 <img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_orders_page.png'>
 <hr>
-<h2><a id='project_contributors'>Project Contributors</a><h2>
+<h2><a id='project_contributors'>Project Contributors</a></h2>
 <ol>
   <li><b><em><a href='https://github.com/chance-gao'>Chance GAO</a></em></b>
     <ul>
