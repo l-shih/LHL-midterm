@@ -73,3 +73,28 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
 <img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_orders_page.png'>
 <hr>
 <h2><a id='project_contributors'>Project Contributors</a><h2>
+<ol>
+  <li><b><em><a href='https://github.com/chance-gao'>Chance GAO</a></em></b>
+    <ul>
+      <li>Created the <em>menu</em> page and made significant contributions to the 
+      functionality of the server back-end</li>
+    </ul>
+  </li>
+  <br>
+  <li><b><em><a href='https://github.com/l-shih'>Lilian SHIH</a></em></b>
+    <ul>
+      <li>Created & styled the cover and error pages and assisted the other 
+      contributors in planning and code-implementation</li>
+    </ul>
+  </li>
+  <br>
+  <li><b><em><a href='https://github.com/kdubss'>Kang WANG</a></em></b>
+    <ul>
+      <li>Created the orders-review page and repo <code>README</code>, and 
+      assisted the other contributors in planning and code-implementation</li>
+    </ul>
+  </li>
+  <br>
+  <li>Everyone contributed equally in project <i>pre-planning</i> and <i>planning</i>, 
+  and contributors worked together to effectively implement code and web page functionality</li>
+</ol>
