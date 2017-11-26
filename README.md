@@ -66,6 +66,22 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
 <hr>
 <h2><a id='final_product'>Final Product</a></h2>
 <h3>Lighthouse Pub</h3>
+<blockquote>
+  <em><p>
+    Feeling hungry? Feeling thirsty? Do you have an insane amount of coding ahead of you, and 
+    feel constantly hungry, and can never feel satiated?
+    <br><br>
+    Then <u>you should come down to <b>Lighthouse Pub</b>!</u>
+    <br><br>
+    At Lighthouse Pub, we provide a vast <code>array</code> of food options that will keep any
+    developer from feeling hungry or thirsty! 
+    Take a scrumptious bite into our Bacon King burger, or quench your thirst with a cool Strawberry 
+    Banana Smoothie!
+    <br>Come for the eats, <code>then</code> proceed to crush some code!
+    At Lighthouse Pub, we'll give you all the food & drink you need to get that <code>app</code> done!
+    We <code>Promise</code>!
+  </p></em>
+</blockquote>
 <h5><i>Index/Cover Page</i></h5>
 <img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_index_page.png'>
 <h5><i>Menu Page</i></h5>
