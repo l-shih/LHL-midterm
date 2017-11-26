@@ -65,6 +65,6 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
 <hr>
 <h2><a id='final_product'>Final Product</a></h2>
 <h3>Lighthouse Pub</h3>
-<p>[Lighthouse Pub Cover Page](https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_index_page.png_)</p>
+<img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_index_page.png'>
 <hr>
 <h2><a id='project_contributors'>Project Contributors</a><h2>
