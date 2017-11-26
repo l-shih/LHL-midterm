@@ -16,6 +16,7 @@ const knexLogger  = require('knex-logger');
 
 const twilio      = require('twilio');
 const client      = new twilio(process.env.SMS_Account, process.env.SMS_Token);
+const moment      = require('moment-timezone');
 
 // Seperated Routes for each Resource
 const usersRoutes = require("./routes/users");
@@ -43,11 +44,13 @@ app.use("/api/", usersRoutes(knex));
 
 // Home page
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render('index');
 });
 
 app.get('/orders', (req, res) => {
-  res.sendStatus(404);
+  res.status(404);
+  res.render('error', {statNum: 404, message: 'Page not found'});
+  return;
 })
 
 // Orders review page:
@@ -55,7 +58,9 @@ app.get('/orders/:id', (req, res) => {
   knex('orders').select(1).where('id', req.params.id)
     .then((rows) => {
       if (!rows.length) {
-        return res.status(404).send('You have not specified an order number! Have you made an order? You should make an order!');
+        res.status(404);
+        res.render('error', {statNum: 404, message: 'This order does not exist. Please try again.'});
+        return;
       } else {
         return knex.select('title', 'description', 'price', 'line_items.quantity', 'orders.total_price', 'orders.id', 'orders.est_ready_time')
                 .from('items')
@@ -69,7 +74,6 @@ app.get('/orders/:id', (req, res) => {
                     return result;
                   }
                 }).then(function(result) {
-          // console.log(result);
           return res.render('orders_review_page', {'result': result});
         })
       }
@@ -82,7 +86,9 @@ app.get('/o/:id', function redirectToOrders(req, res) {
     if(result.length){
       res.redirect('/orders/'+req.params.id);
     } else{
-      res.send(404);
+      res.status(404);
+      res.render('error', {statNum: 404, message: 'This order does not exist. Please try again.'});
+      render;
     }
   });
 });
@@ -108,7 +114,9 @@ app.post('/menu', (req, res)=>{
     var itemString = '';
 
     if(!itemName.length){
-      res.send(404);
+      res.status(400);
+      res.render('error', {statNum: 400, message: 'Your order was empty. Please try again.'});
+      render;
     }
 
     let itemQuantity = {};
@@ -230,8 +238,9 @@ app.post('/owner/accept', (req, res)=>{
        .where('orders.id', acceptObj.orderId)
        .then(function(rows) {
           let userPhone = rows[0].phone;
+          let time = acceptObj.readyAt.toLocaleString();
 
-          let SMS = `Your order has been accepted. It will be ready in ${acceptObj.readyAt}. You can check the order status on /orders/${acceptObj.orderId}`;
+          let SMS = `Your order has been accepted. It will be ready at ${moment(time).tz("America/Los_Angeles").format('HH:mm')}. Check the status at www.LHP.com/o/${acceptObj.orderId}`;
 
           //send SMS to user
           client.messages.create({
