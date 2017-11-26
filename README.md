@@ -61,6 +61,7 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
   <li><b><em><code>morgan</code></em></b> (1.7.0 or above)</li>
   <li><b><em><code>pg</code></em></b> (7.4.0 or above)</li>
   <li><b><em><code>twilio</code></em></b> (3.1.0 or above)</li>
+  <li><b><em><code>moment-timezone</code></em></b> (0.5.14 or above)</li>
 </ul>
 <hr>
 <h2><a id='final_product'>Final Product</a></h2>
