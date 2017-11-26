@@ -56,7 +56,7 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
   <li><b><em><code>ejs</code></em></b> (2.4.1 or above)</li>
   <li><b><em><code>body-parser</code></em></b> (1.15.2 or above)</li>
   <li><b><em><code>node-sass-middleware</code></em></b> (0.11.0 or above)</li>
-  <li><b><em><code>knex</code></em></b> (0.14.1 or above)</li>
+  <li><b><em><code>knex</code></em></b> (0.14.1 or above)</li>s
   <li><b><em><code>knex-logger</code></em></b> (0.1.0 or above)</li>
   <li><b><em><code>morgan</code></em></b> (1.7.0 or above)</li>
   <li><b><em><code>pg</code></em></b> (7.4.0 or above)</li>
@@ -84,14 +84,14 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
   <br>
   <li><b><em><a href='https://github.com/l-shih'>Lilian SHIH</a></em></b>
     <ul>
-      <li>Created & styled the cover and error pages and assisted the other 
+      <li>Created & styled the <i>cover</i> and <i>error</i> pages and assisted the other 
       contributors in planning and code-implementation</li>
     </ul>
   </li>
   <br>
   <li><b><em><a href='https://github.com/kdubss'>Kang WANG</a></em></b>
     <ul>
-      <li>Created the orders-review page and repo <code>README</code>, and 
+      <li>Created the <i>orders-review</i> page and repo <code>README</code>, and 
       assisted the other contributors in planning and code-implementation</li>
     </ul>
   </li>
