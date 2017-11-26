@@ -55,7 +55,7 @@ app.get('/orders', (req, res) => {
 
 // Orders review page:
 app.get('/orders/:id', (req, res) => {
-  knex('orders').select(1).where('id', req.params.id)
+  knex('orders').select(1).where('id', req.params.id).andWhere('total_price', '>', 0)
     .then((rows) => {
       if (!rows.length) {
         res.status(404);
