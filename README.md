@@ -36,12 +36,7 @@
       <li>Using <b><code>AJAX</code></b> or complete <b>SPA approach</b> is optional</li>
     </ul>
   </li>
-  <li>One of the following two <code>CSS</code> grid and UI frameworks,
-    <ul>
-      <li><b>Bootstrap 3</b></li>
-      <li><b>Zurb Foundation 5</b></li>
-    </ul>
-  </li>
+  <li><code>Bootstrap 3</code></li>
   <li><b><em><code>jQuery</code></em></b></li>
   <li><b><em><code>SASS</code></em></b> for styling</li>
   <li><b><em>PostgreSQL</em></b> for Database</li>
