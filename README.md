@@ -56,7 +56,7 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
   <li><b><em><code>ejs</code></em></b> (2.4.1 or above)</li>
   <li><b><em><code>body-parser</code></em></b> (1.15.2 or above)</li>
   <li><b><em><code>node-sass-middleware</code></em></b> (0.11.0 or above)</li>
-  <li><b><em><code>knex</code></em></b> (0.14.1 or above)</li>s
+  <li><b><em><code>knex</code></em></b> (0.14.1 or above)</li>
   <li><b><em><code>knex-logger</code></em></b> (0.1.0 or above)</li>
   <li><b><em><code>morgan</code></em></b> (1.7.0 or above)</li>
   <li><b><em><code>pg</code></em></b> (7.4.0 or above)</li>
