@@ -5,7 +5,7 @@
   <li><a href='#stack_requirements'>Stack Requirements</a></li>
   <li><a href='#dependencies'>Dependencies</a></li>
   <li><a href='#final_product'>Final Product</a></li>
-  <li><a href='#contributors'>Project Contributors</a></li>
+  <li><a href='#project_contributors'>Project Contributors</a></li>
 </ul>
 <hr>
 <h2><a id='project_description'>Project Description</a></h2>
