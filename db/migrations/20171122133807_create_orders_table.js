@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
       table.timestamp("ready_at");
       table.varchar("est_ready_time");
     })
-  ])
+  ]);
 };
 
 exports.down = function(knex, Promise) {

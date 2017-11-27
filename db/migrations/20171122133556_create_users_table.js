@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
       table.string('last_name');
       table.varchar('phone', 20).notNullable();
     })
-  ])
+  ]);
 };
 
 exports.down = function(knex, Promise) {

@@ -1,0 +1,27 @@
+.error-message{
+  background-color: white;
+  height: 400px;
+  margin: 5% 10% 5% 10%;
+  color: #123456;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.88;
+
+  h1 {
+    font-size: 120px;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 20px;
+    text-shadow: none;
+    margin: 15px auto;
+  }
+
+  .error-btn {
+    margin: 15px auto;
+  }
+}
+
+
+

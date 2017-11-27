@@ -5,7 +5,7 @@ const router  = express.Router();
 
 module.exports = (knex) => {
 
-  router.get('/food_type',function(req, res) {
+  router.get('/food_type', function(req, res) {
     knex
       .distinct('type')
       .select('type')
@@ -15,7 +15,7 @@ module.exports = (knex) => {
       });
   });
 
-  router.get('/items',function(req, res) {
+  router.get('/items', function(req, res) {
     knex
       .select()
       .from('items')

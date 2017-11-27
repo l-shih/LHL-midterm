@@ -11,7 +11,7 @@ exports.up = function(knex, Promise) {
       table.foreign('order_id').references('orders.id');
       table.foreign('item_id').references('items.id');
     })
-  ])
+  ]);
 };
 
 exports.down = function(knex, Promise) {

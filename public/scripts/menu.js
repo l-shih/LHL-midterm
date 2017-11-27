@@ -53,7 +53,7 @@ $(() => {
   */
   //add item price to order box
   $('#menu_item').on('click', 'button', function(event) {
-    let price = Number($(this).parent().find('.price').text().replace('$',''));
+    let price = Number($(this).parent().find('.price').text().replace('$', ''));
     price *= 1.12;
     let total = Number($('#menu_order #total').data('total')) + price;
     //set total
@@ -65,7 +65,7 @@ $(() => {
     let title = $(this).parent().find('header').text();
     let quantity = $(`#menu_order .order_item .${title.replace(/\s+/g, '')} .quantity`).data('quantity');
 
-    if(!!quantity){
+    if(quantity){
       quantity++;
     } else{
       quantity = 1;
@@ -74,7 +74,7 @@ $(() => {
       `<div class="panel panel-default ${title.replace(/\s+/g, '')}">
         <p id="item_title">${title}</p>
         <p class='quantity'></p>
-        <p id="unit_price" data-price=${(price/1.12).toFixed(2)}>Price: $${(price/1.12).toFixed(2)}</p>
+        <p id="unit_price" data-price=${(price / 1.12).toFixed(2)}>Price: $${(price / 1.12).toFixed(2)}</p>
         <input id="quantity" type="hidden" name="item_name" value=0>
         <button id="cancel_button" type='button' class="glyphicon glyphicon-minus"></button>
       </div>`;
@@ -82,7 +82,7 @@ $(() => {
       $(item_order).hide().appendTo($('#menu_order .order_item')).slideDown();
     }
 
-    $(`#menu_order .order_item .${title.replace(/\s+/g, '')} #quantity`).val(`${title} ${quantity}`)
+    $(`#menu_order .order_item .${title.replace(/\s+/g, '')} #quantity`).val(`${title} ${quantity}`);
     $(`#menu_order .order_item .${title.replace(/\s+/g, '')} .quantity`).text(`Quantity: ${quantity}`);
     $(`#menu_order .order_item .${title.replace(/\s+/g, '')} .quantity`).data('quantity', quantity);
   });
@@ -103,7 +103,7 @@ $(() => {
 
     //decrease quantity
     quantity--;
-    $(`#menu_order .order_item .${title.replace(/\s+/g, '')} #quantity`).val(`${title} ${quantity}`)
+    $(`#menu_order .order_item .${title.replace(/\s+/g, '')} #quantity`).val(`${title} ${quantity}`);
     $(`#menu_order .order_item .${title.replace(/\s+/g, '')} .quantity`).text(`Quantity: ${quantity}`);
     $(`#menu_order .order_item .${title.replace(/\s+/g, '')} .quantity`).data('quantity', quantity);
 
@@ -112,19 +112,6 @@ $(() => {
       $(this).parent().remove();
     }
   });
-
-  //send sms
-    // $.ajax({
-    //   type: "POST",
-    //   username: SMS_Account,
-    //   password: SMS_Token,
-    //   url: SMS_Url,
-    //   data: {
-    //     "To" : phoneNum,
-    //     "From" : SMS_from,
-    //     "Body" : `${phoneNum} make an order: `
-    //   }
-    // });
 });
 
 

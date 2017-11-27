@@ -11,7 +11,7 @@ exports.up = function(knex, Promise) {
       table.integer('restaurant_id');
       table.foreign('restaurant_id').references('restaurants.id');
     })
-  ])
+  ]);
 };
 
 exports.down = function(knex, Promise) {

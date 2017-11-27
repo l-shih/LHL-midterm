@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
       table.string('province').notNullable();
       table.string('postal_code').notNullable();
     })
-  ])
+  ]);
 };
 
 exports.down = function(knex, Promise) {
