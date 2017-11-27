@@ -36,7 +36,7 @@
       <li>Using <b><code>AJAX</code></b> or complete <b>SPA approach</b> is optional</li>
     </ul>
   </li>
-  <li><code>Bootstrap 3</code></li>
+  <li><b><em>Bootstrap 3</em></b></li>
   <li><b><em><code>jQuery</code></em></b></li>
   <li><b><em><code>SASS</code></em></b> for styling</li>
   <li><b><em>PostgreSQL</em></b> for Database</li>
