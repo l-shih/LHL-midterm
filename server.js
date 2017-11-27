@@ -274,7 +274,7 @@ app.post('/owner/accept', (req, res)=>{
 
 app.post('/owner/add', (req, res)=>{
   return new Promise((resolve, err) => {
-    let type = req.body.addType || null;
+    let type = req.body.addType.toUpperCase() || null;
     let title = req.body.addTitle || null;
     let des = req.body.addDes || null;
     let price = req.body.addPrice || null;
