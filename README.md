@@ -1,5 +1,5 @@
 <h1>Mid-Term Project; Option 7: Food Pick-Up Ordering</h1>
-<b>ToC</b>
+<b><a id='toc'>ToC</a></b>
 <ul>
   <li><a href='#project_description'>Project Description</a></li>
   <li><a href='#stack_requirements'>Stack Requirements</a></li>
@@ -20,6 +20,7 @@ You can use a modern telecomm API service such as Twilio to implement SMS commun
 
 For inspiration check out how Ritual works, but keep in mind that's implemented as a native app and serves more than one restaurant.
 </p></em>
+<a href='#toc'>Back to ToC &#8679;</a>
 <hr>
 <h2><a id='stack_requirements'>Stack Requirements</a></h2>
 <p>The project <em>must</em> use,
@@ -46,6 +47,7 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
   <li><b><em><code>git</code></em></b> for version control</li>
   <li><b><em>heroku</em></b> for hosting (<i>optional</i>)</li>
 </ul>
+<a href='#toc'>Back to ToC &#8679;</a>
 <hr>
 <h2><a id='depenencies'>Dependencies</a></h2>
 <ul>
@@ -63,6 +65,7 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
   <li><b><em><code>twilio</code></em></b> (3.1.0 or above)</li>
   <li><b><em><code>moment-timezone</code></em></b> (0.5.14 or above)</li>
 </ul>
+<a href='#toc'>Back to ToC &#8679;</a>
 <hr>
 <h2><a id='final_product'>Final Product</a></h2>
 <h3>Lighthouse Pub</h3>
@@ -88,6 +91,7 @@ For inspiration check out how Ritual works, but keep in mind that's implemented 
 <img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_menu_page.png'>
 <h5><i>Orders-Review Page</i></h5>
 <img src='https://github.com/chance-gao/LHL-midterm/blob/readme/imgs/lighthouse_pub_orders_page.png'>
+<a href='#toc'>Back to ToC &#8679;</a>
 <hr>
 <h2><a id='project_contributors'>Project Contributors</a></h2>
 <ol>
