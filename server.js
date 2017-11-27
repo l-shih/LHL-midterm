@@ -242,7 +242,7 @@ app.post('/owner/accept', (req, res)=>{
               let userPhone = rows[0].phone;
               let time = acceptObj.readyAt.toLocaleString();
 
-              let SMS = `Your order has been accepted. It will be ready at ${moment(time).tz("America/Los_Angeles").format('HH:mm')}. Check the status at www.LHP.com/o/${acceptObj.orderId}`;
+              let SMS = `Your order has been accepted. It will be ready at ${moment(time).tz("America/Los_Angeles").format('HH:mm')}. Check the status at http://10.30.22.153:8080/o/${acceptObj.orderId}`;
 
               //send SMS to user
               client.messages.create({
