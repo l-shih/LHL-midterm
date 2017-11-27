@@ -10,7 +10,7 @@
           <td class="orders-quantity"><%=result[i].quantity%></td>
           <td>X</td>
           <td class="orders-name"><%=result[i].title%></td>
-          <td class="orders-total">$ <%=Number(result[i].quantity * result[i].price).toFixed(2)%></td>
+          <td class="orders-total">$<%=Number(result[i].quantity * result[i].price).toFixed(2)%></td>
         </tr>
       <%}%>
     </table>
@@ -53,6 +53,8 @@
         <%/* let estimated_pickup_time = paid_at + ready_at; */%>
         <%/* return estimated_pickup_time */%>
       </div>
+      <br>
+      <br>
     <% } %>
   </div>
   <% include ./partials/_footer %>
