@@ -273,19 +273,40 @@ app.post('/owner/accept', (req, res)=>{
 });
 
 app.post('/owner/add', (req, res)=>{
-  let type = req.body.addType || null;
-  let title = req.body.addTitle || null;
-  let des = req.body.addDes || null;
-  let price = req.body.addPrice || null;
-  let resId = req.body.addrestId || null;
+  return new Promise((resolve, err) => {
+    let type = req.body.addType || null;
+    let title = req.body.addTitle || null;
+    let des = req.body.addDes || null;
+    let price = req.body.addPrice || null;
+    let resId = req.body.addrestId || null;
 
-  res.redirect('/owner');
+    resolve({type, title, des, price, resId});
+  })
+    .then((insertObj) => {
+      return knex('items').insert({
+        'type': insertObj.type,
+        'title': insertObj.title,
+        'description': insertObj.des,
+        'price': insertObj.price,
+        'restaurant_id': insertObj.resId
+      });
+    })
+    .then(function() {
+      return res.redirect('/owner');
+    });
 });
 
 app.post('/owner/delete', (req, res)=>{
-  let deleId = req.body.itemId;
-
-  res.redirect('/owner');
+  return new Promise((resolve, err) => {
+    let deleId = req.body.itemId;
+    resolve(deleId);
+  })
+    .then((deleId) => {
+      return knex('items').where('id', deleId).del();
+    })
+    .then(() => {
+      return res.redirect('/owner');
+    });
 });
 
 app.listen(PORT, () => {
