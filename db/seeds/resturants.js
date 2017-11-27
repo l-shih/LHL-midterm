@@ -28,10 +28,10 @@ exports.seed = function(knex, Promise) {
                 knex('items').insert({type: 'PANCAKES', title: 'Red Velvet Pancakes', description: 'Red Velvet isn\'t just for dessert anymore. These decadent pancakes are delicious with mascarpone spread and some maple syrup.', price: 4.45, restaurant_id: 1}),
                 knex('items').insert({type: 'PANCAKES', title: 'Fluffy Pancakes', description: 'These pancakes are a breakfast and brunch favorite that you cannot resist.', price: 4.45, restaurant_id: 1}),
                 knex('items').insert({type: 'PANCAKES', title: 'Baked Pancakes', description: 'Perfect, easy breakfast.', price: 4.45, restaurant_id: 1}),
-                knex('items').insert({type: 'PANCAKES', title: 'Mom\'s Buttermilk Pancakes', description: 'These pancakes are passed down from my grandmother, who was fully Scandinavian. They are light and fluffy, and great with berry syrups.', price: 4.45, restaurant_id: 1}),
+                knex('items').insert({type: 'PANCAKES', title: 'Mom Buttermilk Pancakes', description: 'These pancakes are passed down from my grandmother, who was fully Scandinavian. They are light and fluffy, and great with berry syrups.', price: 4.45, restaurant_id: 1}),
 
                 knex('items').insert({type: 'APPETIZER', title: 'Outrageous Warm Chicken Nacho Dip', description: 'This is a serious crowd-pleaser that is served hot as a dip, spooned over crisp tortilla chips nacho-style, or rolled up in a warm flour tortilla!', price: 2.50, restaurant_id: 1}),
-                knex('items').insert({type: 'APPETIZER', title: 'Big Ray\'s Mexican Monkey Bread', description: 'WOW it is delicious.', price: 2.50, restaurant_id: 1})
+                knex('items').insert({type: 'APPETIZER', title: 'Big Ray Mexican Monkey Bread', description: 'WOW it is delicious.', price: 2.50, restaurant_id: 1})
               ]);
             })
         ]);

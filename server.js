@@ -240,8 +240,9 @@ app.post('/owner/accept', (req, res)=>{
             .where('orders.id', acceptObj.orderId)
             .then(function(rows) {
               let userPhone = rows[0].phone;
+              let time = acceptObj.readyAt.toLocaleString();
 
-              let SMS = `Your order has been accepted. It will be ready in ${acceptObj.readyAt}. You can check the order status on /orders/${acceptObj.orderId}`;
+              let SMS = `Your order has been accepted. It will be ready at ${moment(time).tz("America/Los_Angeles").format('HH:mm')}. Check the status at www.LHP.com/o/${acceptObj.orderId}`;
 
               //send SMS to user
               client.messages.create({
@@ -253,22 +254,7 @@ app.post('/owner/accept', (req, res)=>{
         });
     })
     .then(function() {
-      return knex('users').distinct('users.phone').select('users.phone')
-        .innerJoin('orders', 'users.id', 'order_id')
-        .where('orders.id', acceptObj.orderId)
-        .then(function(rows) {
-          let userPhone = rows[0].phone;
-          let time = acceptObj.readyAt.toLocaleString();
-
-          let SMS = `Your order has been accepted. It will be ready at ${moment(time).tz("America/Los_Angeles").format('HH:mm')}. Check the status at www.LHP.com/o/${acceptObj.orderId}`;
-
-          //send SMS to user
-          client.messages.create({
-            body: SMS,
-            to: '+1' + userPhone,
-            from: process.env.SMS_from
-          });
-        });
+      return res.redirect('/owner');
     });
 });
 
